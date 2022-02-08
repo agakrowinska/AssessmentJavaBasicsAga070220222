@@ -63,4 +63,8 @@ public class AppDoctorService implements UserDetailsService {
 
         return token;
     }
+
+    public int enableAppDoctor (String email){
+        return appDoctorRepository.enableAppDoctor(email);
+    }
 }

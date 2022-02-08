@@ -44,7 +44,7 @@ public class RegistrationService {
     }
 
     @Transactional
-    //first im looking fir a token
+    //first im looking for a token
     public String confirmToken (String token) {
         ConfirmationToken confirmationToken = confirmationTokenService.getToken(token)
                 .orElseThrow(() -> new IllegalStateException("Token is not found"));
