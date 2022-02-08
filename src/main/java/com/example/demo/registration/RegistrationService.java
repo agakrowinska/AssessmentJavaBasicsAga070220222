@@ -38,7 +38,7 @@ public class RegistrationService {
                         AppDoctorRole.USER
                 )
         );
-        String link = "http://localhost:8080/api/v1/hospital/confirm?token=" + token;
+        String link = "http://localhost:8080/confirm?token=" + token;
         emailSender.send(request.getEmail(), buildEmail(request.getLastName(), link));
         return token;
     }

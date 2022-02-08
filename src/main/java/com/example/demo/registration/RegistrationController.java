@@ -1,9 +1,12 @@
 package com.example.demo.registration;
 
+import com.example.demo.appDoctor.AppDoctor;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping(path = "api/v1/hospital")
 @AllArgsConstructor
 public class RegistrationController {
@@ -20,5 +23,10 @@ public class RegistrationController {
     @GetMapping(path = "confirm")
     public String confirm(@RequestParam("token") String token){
         return registrationService.confirmToken(token);
+    }
+    @GetMapping (path = "register")
+    public String getRegisterPage(Model model){
+        model.addAttribute("regRequest", new AppDoctor());
+        return "register_page";
     }
 }
