@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //I can send post requests without being rejected
                 //crsf  = Cross-Site Request Forgery attack
                 .authorizeRequests()
-                    .antMatchers("/api/v*/registration/**")
+                    .antMatchers("/api/v*/hospital/**")
                 // this HttpSecurity will only be applicable to URLs that start with the path
                     .permitAll()
                 //i want to allow everything under registration

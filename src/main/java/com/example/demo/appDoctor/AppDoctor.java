@@ -35,30 +35,26 @@ public class AppDoctor implements UserDetails {
 
     )
     private Long id;
-    private String name;
-    private String username;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
 
     @Enumerated(EnumType.STRING)
     private AppDoctorRole appDoctorRole;
-    private Boolean locked;
-    private Boolean enabled;
+    private Boolean locked = false;
 
-    public AppDoctor(String name,
-                     String username,
-                     String email,
-                     String password,
-                     AppDoctorRole appDoctorRole,
-                     Boolean locked,
-                     Boolean enabled) {
-        this.name = name;
-        this.username = username;
+    //i want to enable only when user confirms, so set to false as default
+    private Boolean enabled = false;
+
+    public AppDoctor(String firstName, String lastName, String email, String password,
+                     AppDoctorRole appDoctorRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.appDoctorRole = appDoctorRole;
-        this.locked = locked;
-        this.enabled = enabled;
+
     }
 
     @Override
@@ -74,7 +70,15 @@ public class AppDoctor implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     @Override

@@ -17,27 +17,26 @@ spring:
         format_sql: true
     show-sql: true
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: a.h.krowinska@gmail.com
-    password: That'sNotMyName2022$
-    protocol: smtp
-    tls: true
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.gmail.com
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: a.h.krowinska@gmail.com
+      password: That'sNotMyName2022$
+      protocol: smtp
+      tls: true
+      properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+        ssl.trust: smtp.gmail.com
 
-    properties:
-      mail:
-        smtp:
-          ssl:
-            trust: "*"
-          auth: true
-          starttls:
-            enable: true
-          connectiontimeout: 5000
-          timeout: 3000
-          writetimeout: 5000
-
+      properties:
+        mail:
+          smtp:
+            ssl:
+              trust: "*"
+            auth: true
+            starttls:
+              enable: true
+            connectiontimeout: 5000
+            timeout: 3000
+            writetimeout: 5000

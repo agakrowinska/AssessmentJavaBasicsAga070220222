@@ -8,7 +8,8 @@ import java.util.Optional;
 
 @Repository
 @Transactional(readOnly = true)
-public interface AppDoctorRepository extends JpaRepository<AppDoctor, Long> {
+public interface AppDoctorRepository
+        extends JpaRepository<AppDoctor, Long> {
 
     Optional<AppDoctor> findByEmail(String email);
 }
