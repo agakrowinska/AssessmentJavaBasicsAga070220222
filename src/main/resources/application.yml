@@ -17,7 +17,7 @@ spring:
         format_sql: true
     show-sql: true
 
-    mail:
+  mail:
       host: smtp.gmail.com
       port: 587
       username: a.h.krowinska@gmail.com
