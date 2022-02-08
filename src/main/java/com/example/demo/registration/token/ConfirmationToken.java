@@ -14,14 +14,14 @@ import java.time.LocalDateTime;
 @Entity
 public class ConfirmationToken {
     @SequenceGenerator(
-            name = "conf_sequence",
-            sequenceName = "conf_sequence",
+            name = "confirmation_token_sequence",
+            sequenceName = "confirmation_token_sequence",
             allocationSize = 1
     )
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "conf_sequence"
+            generator = "confirmation_token_sequence"
 
     )
 
