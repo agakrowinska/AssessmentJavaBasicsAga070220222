@@ -40,6 +40,8 @@ public class AppDoctorService implements UserDetailsService {
         boolean employeeKnown = appDoctorRepository.findByEmail(appDoctor.getEmail()).isPresent();
 
         if (employeeKnown){
+
+            //if email is not confirmed send conf email
             throw new IllegalStateException("This Email is already existing and in use.");
         }
 

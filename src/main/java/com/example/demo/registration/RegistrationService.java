@@ -39,7 +39,7 @@ public class RegistrationService {
                 )
         );
         String link = "http://localhost:8080/api/v1/hospital/confirm?token=" + token;
-        emailSender.send (request.getEmail(), buildEmail(request.getFirstName(), link));
+        emailSender.send(request.getEmail(), buildEmail(request.getFirstName(), link));
         return token;
     }
 
@@ -61,7 +61,7 @@ public class RegistrationService {
 
         confirmationTokenService.setConfirmedAt(token);
         appDoctorService.enableAppDoctor(
-                confirmationToken.getAppDoctor().getEmail()):
+                confirmationToken.getAppDoctor().getEmail());
         return "Confirmed!";
     }
 
