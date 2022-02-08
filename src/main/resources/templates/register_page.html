@@ -102,6 +102,52 @@
     </style>
 </head>
 <body>
+<div class="form">
+    <form method="post" action="/register" th:object="${regRequest}">
+        <h2>Welcome to St Barbara Hospital</h2>
+        <div class = "input-box">
+            <i aria-hidden="true"
+               class="fa fa-user"></i>
+            <input name="firstName"
+                   placeholder="First Name"
+                   type="text"
+                   required>
+        </div>
+        <div class = "input-box">
+            <i aria-hidden="true"
+               class="fa fa-user"></i>
+            <input name="lastName"
+                   placeholder="Last Name"
+                   type="text"
+                   required>
+        </div>
+
+        <div class = "input-box">
+            <i aria-hidden="true"
+                class="fa fa-user"></i>
+             <input name="email"
+           placeholder="e-mail"
+           type="text"
+           required>
+        </div>
+
+        <div class = "input-box">
+            <i aria-hidden="true"
+                class="fa fa-user"></i>
+            <input name="password"
+           placeholder="Password"
+           type="password"
+           required>
+        </div>
+        <div class="input-box">
+            <input name="register"
+                   type="submit"
+                   value="Register">
+
+        </div>
+        <a href="/">Come back to main page</a>
+    </form>
+</div>
 
 </body>
 </html>

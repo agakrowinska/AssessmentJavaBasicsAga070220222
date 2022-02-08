@@ -15,7 +15,7 @@ public class RegistrationController {
     private RegistrationService registrationService;
 
     //annotation post mapping so our advanced Rest client can see it
-    @PostMapping
+    @PostMapping(path = "/register")
     public String register(@RequestBody RegistrationRequest request){
         return registrationService.register(request);
     }
@@ -24,7 +24,7 @@ public class RegistrationController {
     public String confirm(@RequestParam("token") String token){
         return registrationService.confirmToken(token);
     }
-    @GetMapping (path = "register")
+    @GetMapping (path = "/register")
     public String getRegisterPage(Model model){
         model.addAttribute("regRequest", new AppDoctor());
         return "register_page";
