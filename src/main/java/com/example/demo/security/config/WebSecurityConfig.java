@@ -31,11 +31,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/api/v*/hospital/**")
                 // this HttpSecurity will only be applicable to URLs that start with the path
-                    .permitAll()
+                    .permitAll();
                 //i want to allow everything under registration
-                .anyRequest()
-                .authenticated().and()
-                .formLogin();
+               // .anyRequest()
+               // .authenticated().and()
+                //.formLogin();
         //we want to require all users to be authenticated
 
     }

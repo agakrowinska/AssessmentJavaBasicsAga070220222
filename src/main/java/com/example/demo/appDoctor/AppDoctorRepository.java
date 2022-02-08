@@ -17,6 +17,6 @@ public interface AppDoctorRepository
 
     @Transactional
     @Modifying
-    @Query("UPDATE AppDoctor a" + "SET a.enabled = TRUE WHERE a.email = ?1")
+    @Query("UPDATE AppDoctor a " + "SET a.enabled = TRUE WHERE a.email = ?1")
     int enableAppDoctor (String email);
 }

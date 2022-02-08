@@ -15,7 +15,6 @@ import javax.mail.internet.MimeMessage;
 @AllArgsConstructor
 public class EmailService implements EmailSender{
 
-
         //Default configurations
     private final static Logger LOGGER = LoggerFactory.getLogger(EmailService.class);
 
@@ -31,12 +30,12 @@ public class EmailService implements EmailSender{
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
         helper.setText(email, true);
         helper.setTo(to);
-        helper.setSubject("Please confirm your email");
+        helper.setSubject("Please confirm your e-mail");
         helper.setFrom("a.h.krowinska@gmail.com");
         mailSender.send(mimeMessage);
     } catch (MessagingException e) {
-        LOGGER.error("Failed to send Email", e);
-        throw new IllegalStateException("Failed to send Email");
+        LOGGER.error("Failed to send e-mail", e);
+        throw new IllegalStateException("Failed to send e-mail");
     }
     }
 }

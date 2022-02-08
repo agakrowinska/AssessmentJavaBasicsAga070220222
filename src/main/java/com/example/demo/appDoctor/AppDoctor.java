@@ -47,7 +47,9 @@ public class AppDoctor implements UserDetails {
     //i want to enable only when user confirms, so set to false as default
     private Boolean enabled = false;
 
-    public AppDoctor(String firstName, String lastName, String email, String password,
+    public AppDoctor(String firstName,
+                     String lastName,
+                     String email, String password,
                      AppDoctorRole appDoctorRole) {
         this.firstName = firstName;
         this.lastName = lastName;
