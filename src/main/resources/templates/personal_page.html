@@ -2,14 +2,91 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Page</title>
+    <title>Doctor's Intranet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <<style>
+    .fakeimg {
+        height: 200px;
+        background: url("https://images.barewalls.com/comp/art-print-poster/bwc26843391/medical-doctor-dog.jpg");
+        bacground-size: cover;
+    }
+    .team {
+        height: 200px;
+        background: url("https://www.kindpng.com/picc/m/139-1397195_group-of-dog-png-transparent-png.png");
+        background-size: cover;
 
+    }
+    .patient {
+        height: 200px;
+        background: url("https://www.verywellmind.com/thmb/Q0UYkeqdXvAH2Og9tMxE-COWJMs=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/depressed-for-no-reason-56af37433df78cf772c1a7cd.jpg");
+        background-size: cover;
+    }
+</style>
 </head>
 <body>
-<h1>Welcome on board <span th:text="${userName}"></span> </h1>
-<p>We are happy that the registration worked well for you.</p>
-<p>If you have any question regarding your personal website please contact our IT helpdesk</p>
-<a href="/">Come back to main page</a>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>Welcome on board </h1>
+    <p>You will find all the necessary updates about current shifts, news from your department and other important data!</p>
+</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Intranet</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>About </h2>
+            <h5>Photo ID:</h5>
+            <div class="fakeimg"></div>
+            <p>Department: Daily struggles</p>
+            <h3>Important websites:</h3>
+            <p>Use this links when needed</p>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Changing schedule</a></li>
+                <li><a href="#">Over hours</a></li>
+                <li><a href="#">Messenger</a></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+        <div class="col-sm-8">
+            <h2>TEAM</h2>
+            <h5>Updated, Dec 7, 2021</h5>
+            <div class="team"></div>
+            <p>Meet your colleagues</p>
+            <p>Every friday there is a department meeting, where you can meet everyone on person</p>
+            <br>
+            <h2>PATIENTS</h2>
+            <h5>Updated, Feb 8, 2022</h5>
+            <div class="patient"></div>
+            <p>Your patients</p>
+            <p>Here you will find updates about your current patients</p>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>In case of any question about the website contact: IT Helpdesk it@helpdesk.com </p>
+</div>
 
 </body>
 </html>
